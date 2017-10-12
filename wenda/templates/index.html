@@ -1,0 +1,69 @@
+$def with(head,data)
+$:head
+		
+		<!--<div class="container">
+			<h1 class="page-header">用户登录</h1>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<div class="col-md-5">
+						<input type="text" class="form-control" placeholder="邮箱/手机号"/>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-md-5">
+						<input type="password" class="form-control" placeholder="密码"/>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-md-5">
+						<button class="btn-primary">登   录</button>
+					</div>
+				</div>
+			</form>
+		</div>-->
+		
+		<div style="height: 60px;"></div>
+		<div class="container-fluid">
+			<div class="col-md-9">
+				<div class="list-group">
+				$for i in data:
+					<div class="list-group-item" style="border: 0;">
+						<a href="/question/$:(i.id).html" style="color: #0F0F0F;"><h4>$:i.title</h4></a>
+						<p class="text-muted">
+							<small>提问时间:$:i.fbtime</small>	
+							<small class="pull-right">
+								点击量:<span class="badge">$:i.click</span>
+							</small>
+						</p>
+						<p class="text-muted">
+							$:i.content[0:150]
+						</p>
+						<p>
+								
+					$for n in i.keywords.split(','):
+				  		<span class="badge">$:n</span>
+					</div>
+					<div style="border: 1px dashed #ddd;"></div>
+					
+
+
+				<!--<div class="text-center">
+					<ul class="pagination">
+						
+						<li><a href="#">&laquo;</a></li>
+						<li><a href="/">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>-->
+					
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
