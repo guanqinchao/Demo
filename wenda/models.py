@@ -1,7 +1,10 @@
-# coding:utf8
+# coding:utf-8
 from __future__ import unicode_literals
 
 from django.db import models
+import os,django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Demo2.settings")# project_name 项目名称
+django.setup()
 
 # Create your models here.
 class Catagory(models.Model):

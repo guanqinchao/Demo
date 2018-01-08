@@ -17,10 +17,14 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from wenda.views import *
+
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-     url(r'^$', get_questions),
+    url(r'^$', get_questions),
     url(r'^questions/$',get_questions),
     url(r'^detail/(\d+)/$',get_details ,name='question_get_detail'),
     url(r'login/$',Login),
+    url(r'user/$',User),
+    url(r'reg/$',Register),
 ]

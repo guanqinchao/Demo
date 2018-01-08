@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#C:\Users\Qingchao\Desktop\Demo2\Demo  python manage.py runserver
 import os
 import sys
 

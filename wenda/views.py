@@ -31,5 +31,12 @@ def get_details(request,question_id):
         'form':form
     }
     return render(request,'question_details.html',ctx)
+
 def Login(request):
     return render(request,'login.html')
+
+def  User(request):
+    return render(request,'user.html')
+
+def  Register(request):
+    return render(request,'reg.html')
